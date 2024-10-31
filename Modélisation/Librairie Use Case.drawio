@@ -1,0 +1,164 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0" version="24.8.3">
+  <diagram name="Page-1" id="psSStamjs4XWsiaFdm9Q">
+    <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-1" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="400" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-2" value="Accéder au site" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="190" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-3" value="Consulter et rechercher des articles" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="190" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-4" value="Passer une commande" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-5" value="Se connecter" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-9" value="" style="curved=1;endArrow=none;html=1;rounded=0;dashed=1;startArrow=classic;startFill=1;endFill=0;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-2" target="corIFI75Ubuhrt0A3Hu5-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="380" as="sourcePoint" />
+            <mxPoint x="590" y="330" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-10" value="" style="curved=1;endArrow=none;html=1;rounded=0;dashed=1;startArrow=classic;startFill=1;endFill=0;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-3" target="corIFI75Ubuhrt0A3Hu5-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="380" as="sourcePoint" />
+            <mxPoint x="590" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" target="corIFI75Ubuhrt0A3Hu5-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="626" y="507" as="sourcePoint" />
+            <mxPoint x="590" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="590" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-13" value="Include" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="525" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-17" value="Extend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-18" value="Extend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-19" value="&lt;div&gt;Avoir crée&lt;/div&gt;&lt;div&gt;un compte&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="555" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-20" value="" style="curved=1;endArrow=none;html=1;rounded=0;dashed=1;startArrow=classic;startFill=1;endFill=0;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-19" target="corIFI75Ubuhrt0A3Hu5-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="380" as="sourcePoint" />
+            <mxPoint x="590" y="330" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-21" value="Include" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="550" y="480" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-23" value="Ajouter des articles dans le panier" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="270" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-24" value="" style="curved=1;endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-4" target="corIFI75Ubuhrt0A3Hu5-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="490" as="sourcePoint" />
+            <mxPoint x="544" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="670" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-25" value="Extend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="360" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-27" value="Sauvegarder le panier" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-28" value="" style="curved=1;endArrow=none;html=1;rounded=0;dashed=1;endFill=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-23" target="corIFI75Ubuhrt0A3Hu5-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="636" y="517" as="sourcePoint" />
+            <mxPoint x="544" y="535" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="520" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-29" value="Extend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="340" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-31" value="" style="curved=1;endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-27" target="corIFI75Ubuhrt0A3Hu5-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="636" y="517" as="sourcePoint" />
+            <mxPoint x="544" y="535" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-32" value="Include" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-34" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-5" target="corIFI75Ubuhrt0A3Hu5-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="460" as="sourcePoint" />
+            <mxPoint x="590" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-35" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-1" target="corIFI75Ubuhrt0A3Hu5-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="460" as="sourcePoint" />
+            <mxPoint x="590" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-36" value="&lt;div&gt;Récupérer un&lt;/div&gt;&lt;div&gt;panier sauvegardé&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="620" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-37" value="&lt;div&gt;Accéder à&lt;/div&gt;&lt;div&gt;l&#39;historique de commandes&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="620" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-38" value="" style="curved=1;endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-36" target="corIFI75Ubuhrt0A3Hu5-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="636" y="517" as="sourcePoint" />
+            <mxPoint x="544" y="535" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-39" value="" style="curved=1;endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-36" target="corIFI75Ubuhrt0A3Hu5-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="604" y="638" as="sourcePoint" />
+            <mxPoint x="520" y="562" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-40" value="" style="curved=1;endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="corIFI75Ubuhrt0A3Hu5-37" target="corIFI75Ubuhrt0A3Hu5-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="663" y="633" as="sourcePoint" />
+            <mxPoint x="684" y="530" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-41" value="Extend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="560" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-43" value="Extend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="444" y="585" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="corIFI75Ubuhrt0A3Hu5-44" value="Extend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="570" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
