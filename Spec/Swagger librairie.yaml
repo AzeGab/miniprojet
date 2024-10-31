@@ -1,0 +1,372 @@
+openapi: 3.0.0
+info:
+  title: Librairie en ligne
+  description: API pour la gestion d'un site e-commerce de librairie.
+  version: 1.1.0
+
+tags:
+  - name: compte
+    description: Gestion des utilisateurs et authentification.
+  - name: commande
+    description: Gestion des commandes.
+  - name: recherche
+    description: Recherche de livres par nom, auteur ou catégorie.
+
+paths:
+  # Section : Authentification
+  /auth/register:
+    post:
+      summary: Inscription d'un nouvel utilisateur
+      tags:
+        - compte
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          description: Utilisateur inscrit avec succès
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+  /auth/login:
+    post:
+      summary: Connexion d'un utilisateur
+      tags:
+        - compte
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Connexion réussie
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: Jeton d'authentification de l'utilisateur
+
+  # Section : Utilisateurs
+  /users:
+    get:
+      summary: Obtenir la liste de tous les utilisateurs
+      tags:
+        - compte
+      responses:
+        '200':
+          description: Liste des utilisateurs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+
+  /users/{id_user}:
+    get:
+      summary: Consulter les informations d'un utilisateur
+      tags:
+        - compte
+      parameters:
+        - name: id_user
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Informations de l'utilisateur
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+    put:
+      summary: Mise à jour des informations d'un utilisateur
+      tags:
+        - compte
+      parameters:
+        - name: id_user
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Informations de l'utilisateur mises à jour
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+  /users/{id_user}/commands:
+    get:
+      summary: Obtenir la liste des commandes d'un utilisateur
+      tags:
+        - commande
+      parameters:
+        - name: id_user
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Liste des commandes de l'utilisateur
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Command'
+
+  # Section : Livres
+  /books:
+    get:
+      summary: Obtenir la liste de tous les livres
+      tags:
+        - recherche
+      responses:
+        '200':
+          description: Liste des livres
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+
+  /books/search:
+    get:
+      summary: Recherche de livres par nom
+      tags:
+        - recherche
+      parameters:
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Liste des livres correspondant à la recherche
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+
+  /books/author/{id_author}:
+    get:
+      summary: Recherche de livres par auteur
+      tags:
+        - recherche
+      parameters:
+        - name: id_author
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Liste des livres de l'auteur spécifié
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+
+  /books/category/{id_category}:
+    get:
+      summary: Recherche de livres par catégorie
+      tags:
+        - recherche
+      parameters:
+        - name: id_category
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Liste des livres de la catégorie spécifiée
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+
+  # Section : Commandes
+  /commands:
+    get:
+      summary: Obtenir la liste de toutes les commandes
+      tags:
+        - commande
+      responses:
+        '200':
+          description: Liste des commandes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Command'
+    post:
+      summary: Créer une nouvelle commande
+      tags:
+        - commande
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Command'
+      responses:
+        '201':
+          description: Commande créée avec succès
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Command'
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        ID_user:
+          type: integer
+          description: ID unique de l'utilisateur
+        name:
+          type: string
+          description: Prénom de l'utilisateur
+        surname:
+          type: string
+          description: Nom de l'utilisateur
+        email:
+          type: string
+          description: Email de l'utilisateur
+        phone:
+          type: string
+          description: Numéro de téléphone de l'utilisateur
+        address:
+          type: string
+          description: Adresse de l'utilisateur
+        password:
+          type: string
+          description: Mot de passe de l'utilisateur
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/Command'
+          description: Liste des commandes de l'utilisateur
+
+    Book:
+      type: object
+      properties:
+        ID_book:
+          type: integer
+          description: ID unique du livre
+        name:
+          type: string
+          description: Nom du livre
+        resume:
+          type: string
+          description: Résumé du livre
+        price:
+          type: number
+          format: float
+          description: Prix du livre
+        ISNB:
+          type: string
+          description: Numéro ISNB du livre
+        stock:
+          type: integer
+          description: Stock disponible du livre
+        authors:
+          type: array
+          items:
+            $ref: '#/components/schemas/Author'
+          description: Liste des auteurs du livre
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+          description: Liste des catégories du livre
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/Command'
+          description: Liste des commandes associées au livre
+
+    Category:
+      type: object
+      properties:
+        ID_category:
+          type: integer
+          description: ID unique de la catégorie
+        name:
+          type: string
+          description: Nom de la catégorie
+        books:
+          type: array
+          items:
+            $ref: '#/components/schemas/Book'
+          description: Liste des livres de la catégorie
+
+    Author:
+      type: object
+      properties:
+        ID_author:
+          type: integer
+          description: ID unique de l'auteur
+        name:
+          type: string
+          description: Nom de l'auteur
+        books:
+          type: array
+          items:
+            $ref: '#/components/schemas/Book'
+          description: Liste des livres écrits par l'auteur
+
+    Command:
+      type: object
+      properties:
+        ID_Commande:
+          type: integer
+          description: ID unique de la commande
+        datetime:
+          type: string
+          format: date-time
+          description: Date et heure de la commande
+        user:
+          $ref: '#/components/schemas/User'
+          description: Utilisateur ayant passé la commande
+        books:
+          type: array
+          items:
+            $ref: '#/components/schemas/Book'
+          description: Liste des livres commandés
